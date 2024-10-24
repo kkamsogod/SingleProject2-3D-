@@ -14,23 +14,25 @@ public class CharacterManager : MonoBehaviour
             return _instance;
         }
     }
-    public Player _player;
-    public Player player
+    
+    public Player Player
     {
         get { return _player; }
         set { _player = value; }
     }
 
+    private Player _player;
+
     private void Awake()
     {
-        if (_instance = null)
+        if (_instance == null)
         {
             _instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
         {
-            if (_instance == this)
+            if (_instance != this)
             {
                 Destroy(gameObject);
             }

@@ -9,7 +9,6 @@ public class CampFire : MonoBehaviour
 
     List<IDamagable> things = new List<IDamagable>();
 
-    // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("DealDamage", 0, damageRate);

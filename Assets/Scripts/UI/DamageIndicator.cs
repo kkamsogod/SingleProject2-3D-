@@ -10,10 +10,9 @@ public class DamageIndicator : MonoBehaviour
 
     private Coroutine coroutine;
 
-    // Start is called before the first frame update
     void Start()
     {
-        CharacterManager.Instance.player.condition.onTakeDamage += Flash;
+        CharacterManager.Instance.Player.condition.onTakeDamage += Flash;
     }
 
     public void Flash()
